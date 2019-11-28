@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BAPL-DSPMKT-001_Live Feed HTML</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="eventstyle.css">
+		<script id="template-menuBlockL-mrss" type="text/x-handlebars-template">
+			<div class="itemblock" data-block-item="mrss">
+			    <div data-item-type="title" class="itemTitle">
+			    	{{fields.title}}
+				</div>
+				<br>
+				<div data-item-type="description" class="itemLocation">
+					{{fields.description}}
+				</div>
+				<br>
+				<div data-item-type="location" id="itemDateTime">
+					{{fields.location}}
+				</div>
+				<div data-item-type="session" id="itemDateTime">
+					{{fields.session}}
+				</div>
+				<br>
+			</div>
+		</script>
+		<script src="vendor/scripts/lib/jquery/jquery-2.1.1.min.js"></script>
+		<script src="vendor/scripts/lib/handlebars-v3.0.3.js"></script>
+		<script src="mrss.js"></script>
+		<script>
+		</script>
+	</head>
+    <body >
+		<div class="template">
+			<div class="logoHeader">
+				<img src="4-Zone-L-490x120-logo.jpg">
+			</div>
+			<div id="menuBlockL" data-block-type="mrss">
+				<script>
+					var mrssTicker = mrss();
+					mrssTicker.init( {
+						"url":"RSSFEEDHERE",
+						"filter":"all"
+					}, "menuBlockL");
+				</script>
+			</div>
+			<div class="logoFooter">
+				<img src="4-Zone-L-490x120-logo.jpg">
+			</div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+html {
+	overflow: hidden;
+	background-color: green;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	font-family: 'Fjalla One', sans-serif;
+	color: #0f0f0f;
+}
+.brs-brightplates-block-img,
+.brs-brightplates-block-mrss,
+.brs-brightplates-block-rss,
+.brs-brightplates-block-video {
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.template {
+	position:absolute;
+	width:490px;
+	height:804px;
+	font-size:100%;
+	background-image:url('4-Zone-L-490x804.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	z-index: 2;
+	display: inline-block;
+}
+#menuBlockL {
+	position:absolute;
+	width: 100%;
+	top: 120px;
+	-moz-transform:translate3d(0,20px,0);
+	-webkit-transform:translate3d(0,20px,0);
+	transform:translate3d(0,20px,0);
+	z-index: 3;
+}
+.itemDescription,
+.itemLocation,
+.itemDateTime {
+	display: inline-block;
+	font-size: 120%;
+	font-style:italic;
+ 	font-weight: normal;
+	width:90%;
+	text-align: center;
+	overflow: hidden;
+	white-space: normal;
+	z-index: 3;
+}
+.itemTitle {
+	display:inline-block;
+	font-size: 110%;
+  	font-weight: bold;
+	text-align: center;
+	z-index: 3;
+}
+.itemImage img {
+ 	max-height: 100%;
+	z-index: 3;
+}
+.itemblock {
+	display: inline-block;
+	overflow:hidden;
+	width: 100%;
+	text-align: center;
+	z-index: 3;
+}
+.logoFooter {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 120px;
+	z-index: 4;
+}
+.logoHeader {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 120px;
+	z-index: 4;
+}
+@-moz-keyframes ticker {
+	0%   { 	-moz-transform: translate3d(0,560px,0); }
+	100% { 	-moz-transform: translate3d(0,-100%,0);  } }
+@-webkit-keyframes ticker {
+	0% 	 {	-webkit-transform: translate3d(0,560px,0); }
+	100% { 	-webkit-transform: translate3d(0,-100%,0);  } }
+@keyframes ticker {
+	0%   {	-moz-transform: translate3d(0,560px,0);
+			-webkit-transform: translate3d(0,560px,0);
+			transform: translate3d(0,560px,0); }
+	100% {	-moz-transform: translate3d(0,100%,0);
+			-webkit-transform: translate3d(0,-100%,0);
+			transform: translate3d(0,-100%,0); } }
+/* Base Template Css */
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px; 
+	display:none;
+	background: transparent;
+}
